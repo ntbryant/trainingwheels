@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>trAIning-wheels: your expertise, amplified</title>
+<meta name="description" content="Hands-on coaching that helps you and your team turn what you know into AI-powered workflows and tools.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --chalk: #f3f5f7;
+    --asphalt: #1c2027;
+    --muted: #4f5866;
+    --blue: #2347d6;
+    --yellow: #ffd400;
+    --red: #d62828;
+    --line: #d5dae1;
+    --link: #2347d6;
+    --display: "Bricolage Grotesque", system-ui, sans-serif;
+    --text: "Newsreader", Georgia, serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --chalk: #14171c; --asphalt: #eef1f5; --muted: #a6afbc; --line: #2c323c; --link: #8aa2ff; --red: #ff5a4d; }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--chalk); color: var(--asphalt); font: 400 1.2rem/1.65 var(--text); -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+  a { color: var(--link); }
+  a:focus-visible, .btn:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
+  @media (prefers-color-scheme: dark) { a:focus-visible, .btn:focus-visible { outline-color: var(--yellow); } }
+
+  /* masthead */
+  .brand { padding: 32px 0 0; font: 800 clamp(2.4rem, 7vw, 4.2rem)/1 var(--display); letter-spacing: -.035em; }
+  .brand b { color: var(--red); font-weight: 800; }
+
+  /* hero */
+  .hero { display: grid; grid-template-columns: 1.05fr 1fr; gap: 24px; align-items: center; padding: 40px 0 0; }
+  h1 { font: 800 clamp(2.8rem, 7.4vw, 5.6rem)/.96 var(--display); letter-spacing: -.035em; margin: 0 0 24px; }
+  .lede { font-size: 1.35rem; line-height: 1.55; max-width: 31ch; margin: 0 0 28px; color: var(--muted); }
+  .btn { display: inline-block; padding: 15px 24px; border-radius: 999px; background: var(--blue); color: #fff; text-decoration: none; font: 700 1rem/1 var(--display); transition: transform .15s ease; }
+  .btn:hover { transform: translateY(-2px); }
+  .btn.alt { background: var(--yellow); color: #1c2027; }
+
+  .scene { width: 100%; height: auto; overflow: visible; }
+  .scene .ink { stroke: var(--asphalt); }
+  .scene .ink.frame { stroke: var(--red); }
+  .scene .road { stroke: var(--yellow); }
+  .tw { transform-box: fill-box; transform-origin: 100% 0; animation: drop 1.1s cubic-bezier(.5,0,.9,.6) 1.4s forwards; }
+  .bike { animation: ride 1.6s ease-in 2.6s forwards; }
+  @keyframes drop { to { transform: translate(-70px, 90px) rotate(-70deg); opacity: 0; } }
+  @keyframes ride { 0% { transform: translateX(0); } 18% { transform: translateX(-10px); } 100% { transform: translateX(90px); } }
+  @media (prefers-reduced-motion: reduce) {
+    .tw { animation: none; opacity: 0; }
+    .bike { animation: none; }
+  }
+
+  /* sections */
+  section { padding: 88px 0 0; }
+  h2 { font: 800 clamp(1.8rem, 4vw, 2.6rem)/1.05 var(--display); letter-spacing: -.025em; margin: 0 0 14px; }
+  .intro { max-width: 46ch; color: var(--muted); margin: 0 0 36px; }
+
+  /* the ladder */
+  .rungs { list-style: none; margin: 0; padding: 0; border-top: 2px solid var(--asphalt); }
+  .rung { display: grid; grid-template-columns: minmax(110px, 170px) 1fr; gap: 8px 28px; padding: 28px 0; border-bottom: 1px solid var(--line); align-items: baseline; }
+  .rung .n { font: 800 clamp(3rem, 8vw, 5.2rem)/.9 var(--display); letter-spacing: -.04em; color: var(--blue); }
+  @media (prefers-color-scheme: dark) { .rung .n { color: var(--link); } }
+  .rung:nth-child(2) .n { font-size: clamp(3.4rem, 9vw, 6rem); }
+  .rung:nth-child(3) .n { font-size: clamp(3.8rem, 10vw, 6.8rem); }
+  .rung h3 { font: 700 1.5rem/1.2 var(--display); margin: 0 0 6px; letter-spacing: -.015em; }
+  .rung p { margin: 0; max-width: 52ch; color: var(--muted); }
+  .meter { display: flex; gap: 5px; margin-top: 16px; }
+  .meter i { width: 30px; height: 7px; border-radius: 4px; background: var(--line); }
+  .meter i.on { background: var(--blue); }
+  @media (prefers-color-scheme: dark) { .meter i.on { background: var(--link); } }
+  .ex { margin: 14px 0 0; padding-left: 1.1em; max-width: 52ch; color: var(--muted); }
+  .ex li { margin-bottom: 4px; }
+  .cols .intro { margin-bottom: 20px; }
+  .ns { margin-top: 20px; font-size: 1rem; }
+
+  /* two columns */
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; }
+  .cols ul { margin: 0; padding: 0; list-style: none; }
+  .cols li { padding: 14px 0; border-top: 1px solid var(--line); }
+  .cols li:last-child { border-bottom: 1px solid var(--line); }
+  .cols strong { font: 700 1.05rem/1.3 var(--display); display: block; }
+  .cols span { color: var(--muted); }
+
+  .about { max-width: 52ch; }
+  .about p { margin: 0 0 14px; }
+
+  /* contact band */
+  .band { margin-top: 96px; background: var(--blue); color: #fff; padding: 72px 0; }
+  .band h2 { color: #fff; max-width: 14ch; }
+  .band p { max-width: 40ch; color: #dfe6ff; margin: 0 0 28px; }
+  .band .road { height: 6px; margin-top: 56px; background: repeating-linear-gradient(90deg, var(--yellow) 0 36px, transparent 36px 72px); }
+
+  footer { padding: 28px 0 40px; color: var(--muted); font-size: .95rem; display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
+
+  @media (max-width: 820px) {
+    .hero { grid-template-columns: 1fr; padding-top: 28px; }
+    .cols { grid-template-columns: 1fr; gap: 40px; }
+    section { padding-top: 64px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brand">tr<b>AI</b>ning-wheels</div>
+
+  <main>
+    <div class="hero">
+      <div>
+        <h1>Your expertise, amplified.</h1>
+        <p class="lede">I come alongside individuals and teams in their work, to help them turn their know-how into automated workflows and tools that make their work easier and more satisfying.</p>
+        <a class="btn" data-mail href="#start">Send me an email to start the conversation</a>
+      </div>
+
+      <svg class="scene" viewBox="0 0 600 320" role="img" aria-label="A bicycle whose training wheels fall away as it rides off">
+        <line class="road" x1="-40" y1="268" x2="640" y2="268" stroke-width="6" stroke-dasharray="36 36" stroke-linecap="round"/>
+        <g class="bike" fill="none" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+          <circle class="ink" cx="160" cy="176" r="88"/>
+          <circle class="ink" cx="440" cy="176" r="88"/>
+          <path class="ink frame" d="M160 176 L262 176 L232 96 L392 100 L440 176 M262 176 L392 100 M232 96 L160 176 M232 96 L222 80 M206 80 L246 80 M392 100 L380 70 M380 70 L412 64"/>
+          <circle class="ink" cx="262" cy="176" r="9"/>
+          <path class="ink" d="M262 176 L246 208 M230 208 L262 208 M262 176 L278 144 M262 144 L294 144" stroke-width="6"/>
+          <g class="tw">
+            <path stroke="#1c2027" class="ink" d="M160 176 L116 238" stroke-width="6"/>
+            <circle cx="112" cy="240" r="28" fill="#ffd400" stroke="#1c2027" class="ink" stroke-width="6"/>
+          </g>
+        </g>
+      </svg>
+    </div>
+
+    <section>
+      <h2>Three tiers of engagement.</h2>
+      <p class="intro">Start small and simple. Get more complex if you want to. The bars show how much runs on its own.</p>
+      <ol class="rungs">
+        <li class="rung">
+          <div class="side">
+            <span class="n" aria-hidden="true">T1</span>
+            <span class="meter" role="img" aria-label="Runs on its own: a little"><i class="on"></i><i></i><i></i></span>
+          </div>
+          <div>
+            <h3>Getting started</h3>
+            <p>You work with AI one task at a time, in conversation. AI assists, and you keep your hands on the handlebars. We set up your own accounts and agree on what never goes into a chat.</p>
+            <ul class="ex"><li>Drafting and tidying email</li><li>Organizing your calendar and preparing for meetings</li><li>Summarizing long documents and threads</li><li>Quick research and second opinions</li></ul>
+          </div>
+        </li>
+        <li class="rung">
+          <div class="side">
+            <span class="n" aria-hidden="true">T2</span>
+            <span class="meter" role="img" aria-label="Runs on its own: some"><i class="on"></i><i class="on"></i><i></i></span>
+          </div>
+          <div>
+            <h3>Automated workflows</h3>
+            <p>Repeatable, multi-step work where AI does the legwork and you check the result against the source. We write it down as a playbook so others can run it too.</p>
+            <ul class="ex"><li>Extended research and investigations across many sources</li><li>Data analysis and recurring reports</li><li>Email triage and calendar management that run on a schedule</li><li>Bids, reconciliations and summaries built from your own records</li></ul>
+          </div>
+        </li>
+        <li class="rung">
+          <div class="side">
+            <span class="n" aria-hidden="true">T3</span>
+            <span class="meter" role="img" aria-label="Runs on its own: most"><i class="on"></i><i class="on"></i><i class="on"></i></span>
+          </div>
+          <div>
+            <h3>Custom solutions</h3>
+            <p>Software built for your work that runs without you. Built to a written spec, with ownership and upkeep settled up front, then handed to you.</p>
+            <ul class="ex"><li>Dashboards that update themselves</li><li>Intake-to-follow-up automations</li><li>Internal tools shaped around how your team works</li><li>A website, with lead capture</li></ul>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <div class="cols">
+        <div>
+          <h2>Who it's for</h2>
+          <p class="intro">I work with people just beginning with AI and with experienced users ready to take it up a level.</p>
+          <ul>
+            <li><strong>Small businesses and trades</strong><span>Estimates and bids, job-cost summaries, scheduling, invoicing, customer follow-up.</span></li>
+            <li><strong>Public departments</strong><span>Survey and public-comment analysis, grant drafts, staff reports, plain-language notices, with guardrails for public-records rules.</span></li>
+          </ul>
+        </div>
+        <div>
+          <h2>How I work</h2>
+          <ul>
+            <li><strong>You own it.</strong><span>Accounts, files and credentials are yours from day one.</span></li>
+            <li><strong>Coach, not IT department.</strong><span>Every project ends in a handoff.</span></li>
+            <li><strong>People stay in charge.</strong><span>AI assists, you decide, especially before anything reaches the public.</span></li>
+            <li><strong>One engagement at a time.</strong><span>So each gets real attention.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="about">
+      <h2>About your coach</h2>
+      <p>I'm Nick Turman-Bryant, a data scientist and forward deployed engineer. My job is to understand the problems my clients are trying to solve, and then to work with them to build the solutions. We use AI to accelerate innovation through automated workflows and custom software that makes their work easier. I've done that for years, and I use AI tools to do it every day.</p>
+    </section>
+  </main>
+</div>
+
+<div class="band" id="start">
+  <div class="wrap">
+    <h2>Start with a conversation.</h2>
+    <p>In 30 to 45 minutes we pick a few recurring tasks and find the right tier.</p>
+    <a class="btn alt" data-mail data-show href="#start">Email me</a>
+    <noscript><p class="ns">Enable JavaScript to see the email address, or write to training.wheels.coach [at] gmail [dot] com.</p></noscript>
+    <div class="road" aria-hidden="true"></div>
+  </div>
+</div>
+
+
+<script>
+  // Address is assembled at runtime so simple scrapers reading the HTML don't find it.
+  (function () {
+    var addr = ["training.wheels.coach", "gmail.com"].join("@");
+    var href = "mailto:" + addr + "?subject=" + encodeURIComponent("Starting a conversation");
+    document.querySelectorAll("[data-mail]").forEach(function (a) {
+      a.href = href;
+      if (a.hasAttribute("data-show")) a.textContent = addr;
+    });
+  })();
+</script>
+</body>
+</html>
